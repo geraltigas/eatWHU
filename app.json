@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/myself/myself",
+    "pages/myself/mycanteen/mycanteen",
+    "pages/myself/favorite/favorite",
+    "pages/myself/draft/draft",
+    "pages/community/community",
+    "pages/message/massage",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/locate/locate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
