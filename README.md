@@ -11,4 +11,4 @@ a WeChat mini program
 
 ## utils
 
-各种工具，如网络请求模块，promise框架，和常见的数据处理函数operator
+各种工具，如网络请求模块，和常见的数据处理函数operator
