@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/myself/myself",
+    "pages/message/massage",
     "pages/myself/mycanteen/mycanteen",
     "pages/myself/favorite/favorite",
     "pages/myself/draft/draft",
     "pages/community/community",
-    "pages/message/massage",
     "pages/detail/detail",
     "pages/search/search",
     "pages/locate/locate"
@@ -15,6 +15,29 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
+ 
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/community/community",
+      "text": "社区",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/message/massage",
+      "text": "消息",
+      "iconPath": "",
+      "selectedIconPath": ""
+    },
+    {
+      "pagePath": "pages/myself/myself",
+      "text": "我的",
+      "iconPath": "",
+      "selectedIconPath": ""
+    }],
+    "color": "#7E7878",
+    "selectedColor": "#FF7000"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,1 +1,88 @@
 /* pages/myself/myself.wxss */
+
+.background{
+    background-color:#F77C00;
+    width: 750rpx;
+    height: 200rpx;
+    z-index: 1;
+}
+.myhead{
+    position: absolute;
+    left: 104rpx;
+    top: 171rpx;
+    width: 170rpx;
+    height: 176rpx;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0rpx 2rpx 6rpx rgb(75, 75, 75);
+
+}
+.image-head{
+    width: 10rpx;
+    height: 10rpx;
+}
+.backmyhead{
+    position: relative;
+    left: 92rpx;
+    top: 156rpx;
+    width: 194rpx;
+    height: 202rpx;
+    opacity: 0.4;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+}
+.arrow{
+    width: 50rpx;
+    height: 50rpx;
+}
+.list{
+    position: absolute;
+    top:472rpx;
+    left: 67rpx;
+}
+.list view{
+    width: 616rpx;
+    height: 70rpx;
+    border: 2rpx solid rgb(255, 255, 255); 
+    padding-top: 28rpx;
+    margin-bottom: 63rpx;
+    box-shadow: 1rpx 5rpx 15rpx rgb(228, 225, 225);
+    border-radius: 4rpx;
+    font-family: YouYuan;
+    font-size: 33rpx;
+    font-weight: bold;
+    color: #5c5c5c;
+}
+.list view image:first-child{
+    width:10rpx;
+    height: 10rpx;
+}
+.list view image:last-child{
+    position: absolute;
+    left: 533rpx;
+    
+}
+.name{
+    position: absolute;
+    left:376rpx;
+    top: 190rpx;
+    width: 256rpx;
+    height: 54rpx;
+    background-color: #ffffff;
+    border-radius: 7rpx;
+    box-shadow: 4rpx 4rpx 8rpx rgb(182, 182, 182);
+    padding:5rpx;
+    padding-left: 8rpx;
+    padding-bottom: 0rpx;
+    opacity:1;
+}
+.WHU{
+    position: absolute;
+    top: 1200rpx;
+    height: 110rpx;
+    left: 210rpx;
+    width: 341rpx;
+
+}

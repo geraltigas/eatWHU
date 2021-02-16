@@ -32,6 +32,9 @@ App({
       }
     })
   },
+  onload:function(){
+
+  },
   globalData: {
     userInfo: null
   }

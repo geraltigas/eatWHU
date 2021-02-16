@@ -1,2 +1,54 @@
 <!--pages/myself/myself.wxml-->
-<text>pages/myself/myself.wxml</text>
+<view class="background">
+  <view class="backmyhead">
+  </view>
+
+  <view class="myhead">
+      <image class="image-head" src="{{headimage}}">
+      </image>
+  </view>
+
+  <view class="name">
+  姓名：{{name}}
+  </view>
+
+  <view class="list">
+    <navigator url="mycanteen/mycanteen" open-type="navigate">
+      <view class="mucanten">
+        <image src="">
+        </image>
+        我的食堂
+        <image src="../../source/arrow.png" class="arrow"></image>
+      </view>
+    </navigator>
+
+    <navigator url="favorite/favorite" open-type="navigate">
+      <view class="myfavorite">
+        <image src="">
+        </image>
+        我的收藏
+        <image src="../../source/arrow.png"  class="arrow"></image>
+      </view>
+    </navigator>
+
+    <navigator url="draft/draft" open-type="navigate">
+      <view class="draft">
+        <image src="">
+        </image>
+        草稿
+        <image src="../../source/arrow.png"  class="arrow"></image>
+      </view>
+    </navigator>
+
+    <navigator open-type="contact">
+      <view class="server">
+        <image src="">
+        </image>
+        客服
+        <image src="../../source/arrow.png"  class="arrow"></image>
+      </view>
+    </navigator>
+  </view>
+
+  <image src="../../source/WHU.png" class="WHU"></image>
+</view>
