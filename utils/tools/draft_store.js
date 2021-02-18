@@ -1,22 +1,26 @@
-function storeDraft(address,text,timestamp) {
-    var nowjson={1:{address:address,
-        text:text,
-        timestamp:timestamp
-}}
-    wx.getStorage({
-        key:"draft",
-        success: function (res){
-            wx.setStorage({
-            data: connectJSON(nowjson,res.data),
-            key: 'draft',
-            })
-        },
-        fail:function (err){
-            wx.setStorage({
-            data: nowjson,
-            key: 'draft',
-            })
-        }
+const storeDraft = (address,text,timestamp) => {
+    return new Promise((resolve,reject)=>{
+        var nowjson={1:{address:address,
+            text:text,
+            timestamp:timestamp
+        }}
+        wx.getStorage({
+            key:"draft",
+            success: function (res){
+                wx.setStorage({
+                data: connectJSON(nowjson,res.data),
+                key: 'draft',
+                })
+                resolve(1)
+            },
+            fail:function (err){
+                wx.setStorage({
+                data: nowjson,
+                key: 'draft',
+                })
+                reject(0)
+            }
+        })
     })
 }
 function connectJSON(json1,json2){

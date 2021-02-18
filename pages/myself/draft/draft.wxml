@@ -1,6 +1,6 @@
 <!--pages/myself/draft/draft.wxml-->
 <view class="list">
-  <view class="postdraft" wx:for="{{draft}}" wx:for-index="key" wx:for-item="value" wx:if="{{1}}">
+  <view class="postdraft" wx:for="{{draft}}" wx:for-index="key" wx:for-item="value" wx:if="{{true}}">
   <view>
     <text class="location">{{value.address}}
     </text>
@@ -8,8 +8,9 @@
     </view>
     <text class="time">{{value.timestamp}}
     </text>
-    <image class="arrow"></image>
-    <image class="trush"></image>
+    <image class="arrow" src="../../../source/arrow.png"></image>
+    <image class="trush" src="{{selected[key-1]? selectedtrush:trush}}" bindtap = "taptrush" data-key="{{key}}"></image>
+    <image class="WHU" src="../../../source/5.png"></image>
   </view>
   </view>
 </view>

@@ -6,8 +6,14 @@
   padding-left: 30rpx;
   padding-right: 30rpx;
 }
-.list view:first-child{
-  border: 2rpx solid #000;
+.list view view:last-child{
+  border:0rpx solid rgb(207, 207, 207);
+  margin-bottom: 40rpx;
+  height: 336rpx;
+  border-radius: 30rpx;
+}
+.postdraft{
+  border:4rpx solid rgb(207, 207, 207);
   margin-bottom: 40rpx;
   height: 336rpx;
   border-radius: 30rpx;
@@ -18,7 +24,6 @@
   left:42rpx;
 }
 .comments{
-    background-color: aqua;
     position: relative;
     left:70rpx;
     top:30rpx;
@@ -27,4 +32,31 @@
     overflow: hidden;
     word-break: break-all;
     -webkit-line-clamp: 4;
+}
+.time{
+  position: relative;
+  top:50rpx;
+  left:40rpx;
+}
+.trush{
+  width: 32rpx;
+  height: 32rpx;
+  position: relative;
+  top: -505rpx;
+  left:590rpx
+}
+.arrow{
+  position:relative;
+  width: 44rpx;
+  height:44rpx;
+  bottom:246rpx;
+  left: 630rpx;
+}
+.WHU{
+  position: relative;
+  bottom: 295rpx;
+  left: 250rpx;
+  width:450rpx;
+  height:550rpx;
+  opacity: 0.3;
 }

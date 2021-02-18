@@ -1,7 +1,35 @@
 // pages/myself/draft/draft.js
 var storeDraft = require('../../../utils/tools/draft_store.js').storeDraft;
-Page({
+var arrayGenerator = function (number){
+  var i = [];
+  for(var a = 1; a <= number;++a){
+    i[a-1]=false;
+  }
+  return i;
+}
+var darftget = (that) =>{
 
+    wx.getStorage({
+      key: 'draft',
+      success: function (res) {
+        if(that.data.draft){
+          that.setData({
+            draft: res.data,
+            selected: arrayGenerator(Object.keys(res.data).length)
+          })
+        }else{
+        that.setData({
+          draft: {}
+        })
+      }
+      },
+      fail:function (){
+        
+        console.log("fail")
+      }
+    })
+}
+Page({
   /**
    * 页面的初始数据
    */
@@ -13,42 +41,29 @@ Page({
       timestamp: new Date().getTime(),
       }
     },
-    showDraft: 1
+    showDraft: 1,
+    selected:[],
+    trush:"../../../source/trushcan.png",
+    selectedtrush:"../../../source/trushcan_after.png",
   },
-  
+  taptrush:function(event){
+    var that = this
+    console.log(event)
+    var key = event.currentTarget.dataset.key
+    console.log(key)
+    that.setData({
+      selected: ((key)=>{
+        that.data.selected[key-1] = !that.data.selected[key-1];
+        return that.data.selected
+      })(key)
+    })
+    console.log(that.data.selected)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    storeDraft("1111","111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",111111111)
-    setTimeout(function () {
-    console.log("ok")
-    console.log(that.data)
-    wx.getStorage({
-      key: 'draft',
-      success: function (res) {
-        console.log("1")
-        if(that.data.draft){
-          that.setData({
-            draft: res.data
-          })
-          console.log(that.data.draft)
-          console.log("2")
-        }else{
-        that.setData({
-          draft: {}
-        })
-        console.log(3)
-      }
-      },
-      fail:function (){
-        
-        console.log("fail")
-      }
-    })}
-    ,100)
-    console.log("okkkk")
+      darftget(this)
   },
 
   /**
