@@ -1,2 +1,15 @@
 <!--pages/myself/draft/draft.wxml-->
-<text>pages/myself/draft/draft.wxml</text>
+<view class="list">
+  <view class="postdraft" wx:for="{{draft}}" wx:for-index="key" wx:for-item="value" wx:if="{{1}}">
+  <view>
+    <text class="location">{{value.address}}
+    </text>
+    <view class="comments">{{value.text}}
+    </view>
+    <text class="time">{{value.timestamp}}
+    </text>
+    <image class="arrow"></image>
+    <image class="trush"></image>
+  </view>
+  </view>
+</view>

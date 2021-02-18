@@ -1,1 +1,30 @@
 /* pages/myself/draft/draft.wxss */
+.list{
+  display: flex;
+  flex-direction: column;
+  padding-top: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.list view:first-child{
+  border: 2rpx solid #000;
+  margin-bottom: 40rpx;
+  height: 336rpx;
+  border-radius: 30rpx;
+}
+.location{
+  position: relative;
+  top:22rpx;
+  left:42rpx;
+}
+.comments{
+    background-color: aqua;
+    position: relative;
+    left:70rpx;
+    top:30rpx;
+    width: 550rpx;
+    height: 190rpx;
+    overflow: hidden;
+    word-break: break-all;
+    -webkit-line-clamp: 4;
+}

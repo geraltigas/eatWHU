@@ -1,10 +1,30 @@
 /* pages/myself/myself.wxss */
-
-.background{
-    background-color:#F77C00;
-    width: 750rpx;
-    height: 200rpx;
-    z-index: 1;
+.backmyhead image{
+    width:100%;
+    height: 470rpx;
+}
+.backgroundhead{
+    position: absolute;
+    left: 92rpx;
+    top: 156rpx;
+    width: 194rpx;
+    height: 202rpx;
+    opacity: 0.4;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+}
+.list navigator view image:first-child{
+    width: 60rpx;
+    height: 56rpx;
+    margin-left: 32rpx;
+    margin-right: 20rpx;
+    position: relative;
+    bottom: 5rpx;
+}
+.list navigator view text{
+    position: relative;
+    bottom: 25rpx;
 }
 .myhead{
     position: absolute;
@@ -22,17 +42,6 @@
     width: 10rpx;
     height: 10rpx;
 }
-.backmyhead{
-    position: relative;
-    left: 92rpx;
-    top: 156rpx;
-    width: 194rpx;
-    height: 202rpx;
-    opacity: 0.4;
-    background-color: #ffffff;
-    border-radius: 50%;
-    z-index: 10;
-}
 .arrow{
     width: 50rpx;
     height: 50rpx;
@@ -49,7 +58,7 @@
     padding-top: 28rpx;
     margin-bottom: 63rpx;
     box-shadow: 1rpx 5rpx 15rpx rgb(228, 225, 225);
-    border-radius: 4rpx;
+    border-radius: 18rpx;
     font-family: YouYuan;
     font-size: 33rpx;
     font-weight: bold;

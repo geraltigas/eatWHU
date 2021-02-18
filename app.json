@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/myself/draft/draft",
     "pages/myself/myself",
     "pages/message/massage",
     "pages/myself/mycanteen/mycanteen",
     "pages/myself/favorite/favorite",
-    "pages/myself/draft/draft",
+
     "pages/community/community",
     "pages/detail/detail",
     "pages/search/search",
@@ -21,20 +22,20 @@
     "list": [{
       "pagePath": "pages/community/community",
       "text": "社区",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "iconPath": "source/community.png",
+      "selectedIconPath": "source/community_after.png"
     },
     {
       "pagePath": "pages/message/massage",
       "text": "消息",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "iconPath": "source/message_after.png",
+      "selectedIconPath": "source/message.png"
     },
     {
       "pagePath": "pages/myself/myself",
       "text": "我的",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "iconPath": "source/mine_after.png",
+      "selectedIconPath": "source/mine.png"
     }],
     "color": "#7E7878",
     "selectedColor": "#FF7000"
