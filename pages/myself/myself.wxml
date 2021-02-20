@@ -8,7 +8,7 @@
   </view>
 
   <view class="myhead">
-      <image class="image-head" src="{{headimage}}">
+      <image class="image-head" src="{{headImage}}">
       </image>
   </view>
 

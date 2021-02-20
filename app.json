@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/myself/myself",
     "pages/message/massage",
+    "pages/login/login",
     "pages/myself/mycanteen/mycanteen",
     "pages/myself/favorite/favorite",
     "pages/myself/draft/draft",

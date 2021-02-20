@@ -14,3 +14,6 @@
   </view>
   </view>
 </view>
+<view class="notice" wx:if="{{isDraft}}">
+无草稿
+</view>

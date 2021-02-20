@@ -1,11 +1,28 @@
+var selfInfo = function(){
+  var Info = wx.getStorageSync('selfInfo')
+  if (Info){
+    this.setData({
+      name:Info.name,
+      studentID:Info.StudentID,
+      headImage:Info.headImage
+    });
+  }else{
+    wx.showToast({
+      title: "未登录",
+      icon:"none",
+      duration: 1000
+    })
+  }
+}
 // pages/myself/myself.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    
+    name:"",
+    studentId:null,
+    headImage:null
   },
 
   /**
@@ -26,7 +43,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    selfInfo();
   },
 
   /**

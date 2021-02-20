@@ -42,21 +42,27 @@
   width: 32rpx;
   height: 32rpx;
   position: relative;
-  top: -505rpx;
-  left:590rpx
+  top: -185rpx;
+  left:590rpx;
+  z-index: 1;
 }
 .arrow{
   position:relative;
   width: 44rpx;
   height:44rpx;
-  bottom:760rpx;
+  bottom:425rpx;
   left: 630rpx;
 }
 .WHU{
   position: relative;
-  bottom: 295rpx;
-  left: 250rpx;
-  width:450rpx;
-  height:550rpx;
-  opacity: 0.3;
+  bottom: 150rpx;
+  left: 300rpx;
+  width:300rpx;
+  height:225rpx;
+  opacity: 0.5;
+  z-index: 0;
+}
+.notice{
+  text-align: center;
+  text-justify: center;
 }

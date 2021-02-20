@@ -1,5 +1,7 @@
 // pages/myself/draft/draft.js
 var storeDraft = require('../../../utils/function.js').storeDraft;
+var deleteJSON = require('../../../utils/function.js').deleteJSON;
+var timeToTime = require('../../../utils/function.js').timeToTime;
 var arrayGenerator = function (number){
   var i = [];
   for(var a = 1; a <= number;++a){
@@ -8,18 +10,24 @@ var arrayGenerator = function (number){
   return i;
 }
 var darftget = (that) =>{
-
     wx.getStorage({
       key: 'draft',
       success: function (res) {
         if(that.data.draft){
           that.setData({
-            draft: res.data,
-            selected: arrayGenerator(Object.keys(res.data).length)
+            draft: (()=>{
+              console.log(res.data)
+              for(var i=1;i <= Object.keys(res.data).length;i++){
+                res.data[i].timestamp = "保存于"+timeToTime(res.data[i].timestamp);
+              }
+              return res.data
+            })(),
+            isDraft:false
           })
         }else{
         that.setData({
-          draft: {}
+          draft: {},
+          isDraft:true
         })
       }
       },
@@ -28,6 +36,28 @@ var darftget = (that) =>{
         console.log("fail")
       }
     })
+}
+var cleanDraft = function (key,that){
+  console.log(that.data.draft)
+  var draft = deleteJSON(that.data.draft,key)
+  console.log(draft)
+  wx.setStorage({
+    data: draft,
+    key: 'draft',
+    success: function (res) {
+      that.setData({
+        draft:draft
+      })
+    },
+    fail:function (){
+      wx.showToast({
+        title: '删除失败',
+        icon:"none",
+        duration: 1000
+      })
+    }
+  })
+
 }
 Page({
   /**
@@ -45,32 +75,25 @@ Page({
     selected:[],
     trush:"../../../source/trushcan.png",
     selectedtrush:"../../../source/trushcan_after.png",
+    isDraft: true,
   },
   taptrush:function(event){
     var that = this
-    console.log(event)
     var key = event.currentTarget.dataset.key
-    console.log(key)
-    that.setData({
-      selected: ((key)=>{
-        that.data.selected[key-1] = !that.data.selected[key-1];
-        return that.data.selected
-      })(key)
-    })
-    console.log(that.data.selected)
+    cleanDraft(key,that);
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      darftget(this)
+    storeDraft("hhhh","okkkkkkk")
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    darftget(this);
   },
 
   /**
