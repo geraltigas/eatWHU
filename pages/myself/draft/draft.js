@@ -1,5 +1,5 @@
 // pages/myself/draft/draft.js
-var storeDraft = require('../../../utils/tools/draft_store.js').storeDraft;
+var storeDraft = require('../../../utils/function.js').storeDraft;
 var arrayGenerator = function (number){
   var i = [];
   for(var a = 1; a <= number;++a){

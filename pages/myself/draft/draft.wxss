@@ -49,7 +49,7 @@
   position:relative;
   width: 44rpx;
   height:44rpx;
-  bottom:246rpx;
+  bottom:760rpx;
   left: 630rpx;
 }
 .WHU{

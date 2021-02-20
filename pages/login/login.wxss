@@ -1,0 +1,59 @@
+/* pages/login.wxss */
+.login_image{
+    width:392rpx;
+    height:392rpx;
+    position: relative;
+    top: 98rpx;
+    left: 172rpx;
+}
+.studentID{
+    border-radius: 15rpx;
+    padding-left: 130rpx;
+    width: 486rpx;
+    height: 98rpx;
+    position:relative;
+    top: 125rpx;
+    left: 70rpx;
+    box-shadow: 0rpx 4rpx 10rpx rgb(223, 223, 223);
+}
+.passward{
+    border-radius: 15rpx;
+    padding-left: 130rpx;
+    width: 486rpx;
+    height: 98rpx;
+    position:relative;
+    top: 140rpx;
+    left: 70rpx;
+    box-shadow: 0rpx 4rpx 10rpx rgb(223, 223, 223);
+}
+.bindlogin{
+    position: relative;
+    top: 180rpx;
+    background-color: rgba(249, 185, 112, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: YouYuan;
+    font-size: 16px;
+    font-weight: normal;
+    height: 68rpx;
+    padding: 0rpx;
+    padding-top: 10rpx;
+    z-index: 1;
+}
+.studentIDtext{
+    position: relative;
+    top: 54rpx;
+    left: 100rpx;
+}
+.passwardText{
+    position: relative;
+    top: 68rpx;
+    left: 100rpx;
+}
+.image{
+    z-index: 0;
+    position: relative;
+    top: 90rpx;
+    width:500rpx;
+    height: 500rpx;
+    left:117rpx
+}

@@ -87,11 +87,24 @@
     padding-bottom: 0rpx;
     opacity:1;
 }
+.studentID{
+    position: absolute;
+    left:376rpx;
+    top: 260rpx;
+    width: 256rpx;
+    height: 54rpx;
+    background-color: #ffffff;
+    border-radius: 7rpx;
+    box-shadow: 4rpx 4rpx 8rpx rgb(182, 182, 182);
+    padding:5rpx;
+    padding-left: 8rpx;
+    padding-bottom: 0rpx;
+    opacity:1;
+}
 .WHU{
     position: absolute;
     top: 1200rpx;
     height: 110rpx;
     left: 210rpx;
     width: 341rpx;
-
 }

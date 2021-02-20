@@ -15,13 +15,15 @@
   <view class="name">
   姓名：{{name}}
   </view>
-
+  <view class="studentID">
+  学号：{{studentID}}
+  </view>
   <view class="list">
-    <navigator url="mycanteen/mycanteen" open-type="navigate">
+    <navigator url="../login/login" open-type="navigate">
       <view class="mucanten">
-        <image src="../../source/mycanteen.png">
+        <image src="../../source/identity.png">
         </image>
-        <text>我的食堂</text>
+        <text>信息认证</text>
         <image src="../../source/arrow.png" class="arrow"></image>
       </view>
     </navigator>
