@@ -5,10 +5,10 @@ const storeDraft = (address, text) => {
             1: {
                 address: address,
                 text: text,
-                timestamp: (()=>{
+                timestamp: (() => {
                     const date = new Date();
                     var nowyear = date.getFullYear();
-                    var nowmonth = date.getMonth()+1;
+                    var nowmonth = date.getMonth() + 1;
                     var nowday = date.getDate();
                     var nowhour = date.getHours();
                     var nowmin = date.getMinutes();
@@ -36,6 +36,19 @@ const storeDraft = (address, text) => {
         });
     });
 };
+const storePromise = (key) => {
+    return new Promise((resolve, reject) => {
+        wx.getStorage({
+            key: key,
+            success: function (res) {
+                resolve(res.data);
+            },
+            fail: function (err) {
+                reject(err)
+            }
+        })
+    })
+}
 
 function connectJSON(json1, json2) {
     let json = {};
@@ -53,7 +66,7 @@ function connectJSON(json1, json2) {
 
 function deleteJSON(json, key) {
     for (var i = Number(key); i < Object.keys(json).length; ++i) {
-        var a = json[1+i];
+        var a = json[1 + i];
         json[i] = a;
     }
     delete json[Object.keys(json).length];
@@ -61,7 +74,7 @@ function deleteJSON(json, key) {
 }
 
 //  date -----------------------------------------------------
-function getTime(date) {
+function getTime(data) {
     const year = data.getFullYear();
     const month = data.getMonth() + 1;
     const day = data.getDate();
@@ -89,25 +102,75 @@ function timeToTime(arr) {
     const hour = arr[3];
     const minute = arr[4];
     const sec = arr[5];
-    if(nowyear - year >=1){
+    if (nowyear - year >= 1) {
         return "很久以前"
-    }else if(nowmonth - month >=1||nowday - day >= 1){
-        return month+"月"+day+"日"
-    }else if(nowhour - hour >= 1){
-        return (nowhour - hour)+"小时前"
-    }else if(nowmin - minute >=1){
-        return (nowmin - minute)+"分钟前"
-    }else{
-        return (nowsec - sec)+"秒前"
+    } else if (nowmonth - month >= 1 || nowday - day >= 1) {
+        return month + "月" + day + "日"
+    } else if (nowhour - hour >= 1) {
+        return (nowhour - hour) + "小时前"
+    } else if (nowmin - minute >= 1) {
+        return (nowmin - minute) + "分钟前"
+    } else {
+        return (nowsec - sec) + "秒前"
+    }
+}
+
+function stampToTime(time) {
+    const date = new Date();
+    const nowyear = date.getFullYear();
+    const nowmonth = date.getMonth();
+    const nowday = date.getDate();
+    const nowhour = date.getHours();
+    const nowmin = date.getMinutes();
+    const nowsec = date.getSeconds();
+    arr = (() => {
+        const date = time;
+        var nowyear = date.getFullYear();
+        var nowmonth = date.getMonth() + 1;
+        var nowday = date.getDate();
+        var nowhour = date.getHours();
+        var nowmin = date.getMinutes();
+        var nowsec = date.getSeconds();
+        return [nowyear, nowmonth, nowday, nowhour, nowmin, nowsec]
+    })()
+    const year = arr[0];
+    const month = arr[1];
+    const day = arr[2];
+    const hour = arr[3];
+    const minute = arr[4];
+    const sec = arr[5];
+    if (nowyear - year >= 1) {
+        return "很久以前"
+    } else if (nowmonth - month >= 1 || nowday - day >= 1) {
+        return month + "月" + day + "日"
+    } else if (nowhour - hour >= 1) {
+        return (nowhour - hour) + "小时前"
+    } else if (nowmin - minute >= 1) {
+        return (nowmin - minute) + "分钟前"
+    } else {
+        return (nowsec - sec) + "秒前"
     }
 }
 //  network ------------------------------------------------------
-
+const requestPromise = function(json){
+    return new Promise((resolve, reject) => {
+        wx.request({
+          ...json,
+          success: function (res) {
+            resolve(res)
+          },
+          fail: function (err){
+            reject(err)
+          }
+        })
+    })
+}
 //  export-----
 module.exports = {
     getTime: getTime,
     storeDraft: storeDraft,
     connectJSON: connectJSON,
     deleteJSON: deleteJSON,
-    timeToTime: timeToTime
+    timeToTime: timeToTime,
+    getStorePromise: storePromise,
 };

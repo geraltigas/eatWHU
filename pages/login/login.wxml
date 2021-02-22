@@ -4,5 +4,7 @@
 <text class="studentIDtext">学号</text>
 <input class="passward" bindinput="bindinput2" password="true" placeholder="请输入密码" placeholder-style="color:rgb(173, 173, 173)"></input>
 <text class="passwardText">密码</text>
+<view class="check">
+<checkbox-group bindchange="bindcheck"><checkbox bindchange="bindcheck"></checkbox></checkbox-group><text>以食堂人员身份登录</text></view>
 <button class="bindlogin" bindtap = "bindtap" style="width: 216rpx;">绑定登录</button>
 <image class="image" src="../../source/loginback.png"></image>

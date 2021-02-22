@@ -1,12 +1,13 @@
 // pages/login.js
+const getStorePromise = require('../../utils/function.js').getStorePromise;
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     studentID: null,
-    password: null
+    password: null,
+    isServer: false
   },
   bindinput1: function(event){
     var that=this;
@@ -22,6 +23,14 @@ Page({
   },
   bindtap: function(event){
     var that = this;
+    
+  },
+  bindcheck: function(event){
+    var that = this;
+    that.setData({
+      isServer: !that.data.isServer
+    })
+    wx.setStorageSync('isServer',that.data.isServer)
   },
   /**
    * 生命周期函数--监听页面加载

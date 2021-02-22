@@ -6,6 +6,31 @@
     top: 98rpx;
     left: 172rpx;
 }
+.check{
+    position: relative;
+    top: 0rpx;
+    left: 10rpx;
+    width: 400rpx;
+}
+checkbox{
+    position: relative;
+    top: 120rpx;
+    left: 80rpx;
+}
+checkbox .wx-checkbox-input{
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    border:2rpx solid rgb(238, 130, 29);
+}
+.check text{
+    position: relative;
+    left: 110rpx;
+    top: 79rpx;
+    font-family: YouYuan;
+    font-size: 12px;
+    font-weight: bold;
+}
 .studentID{
     border-radius: 15rpx;
     padding-left: 130rpx;

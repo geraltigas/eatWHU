@@ -108,3 +108,25 @@
     left: 210rpx;
     width: 341rpx;
 }
+.button{
+    border:none;
+    display: inline;
+    font-size: 30rpx;
+    padding:0 6rpx;
+    color:#3C91FB;
+    background-color: #F2F2F2;
+    padding: 0rpx;
+    margin:0rpx;
+}
+.serverimage{
+    width: 60rpx!important;
+    height: 60rpx!important;
+    position: relative;
+    right: 210rpx;
+    bottom:10rpx
+}
+.server text{
+    position: relative;
+    bottom:28rpx;
+    right: 195rpx;
+}

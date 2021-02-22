@@ -3,7 +3,6 @@
   <view class="backgroundhead"></view>
   <view class="backmyhead">
     <image src="../../source/backmyhead.png">
-    
   </image>
   </view>
 
@@ -46,14 +45,15 @@
       </view>
     </navigator>
 
-    <navigator open-type="contact">
-      <view class="server">
-        <image src="../../source/server.png">
+    <button class="button" open-type="contact">
+    <view class="server">
+        <image src="../../source/server.png" class="serverimage">
         </image>
         <text>客服</text>
-        <image src="../../source/arrow.png"  class="arrow"></image>
+        <image src="../../source/arrow.png" class="arrow"></image>
       </view>
-    </navigator>
+    </button>
+
   </view>
 
   <image src="../../source/WHU.png" class="WHU"></image>
