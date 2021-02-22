@@ -1,5 +1,8 @@
 // pages/login.js
 const getStorePromise = require('../../utils/function.js').getStorePromise;
+var setUserInfo = function () {
+
+}
 Page({
   /**
    * 页面的初始数据
@@ -7,7 +10,8 @@ Page({
   data: {
     studentID: null,
     password: null,
-    isServer: false
+    isServer: false,
+    headimage:null
   },
   bindinput1: function(event){
     var that=this;
@@ -23,7 +27,32 @@ Page({
   },
   bindtap: function(event){
     var that = this;
-    
+    wx.login({
+      success: function(res){
+
+      },
+      fail: function(err){
+
+      },
+      complete: function(){
+        wx.getUserInfo({
+          complete: (res) => {
+            console.log(typeof res.rawData)
+            var resjson = JSON.parse(res.rawData);
+            wx.setStorageSync('selfInfo',{
+              name:resjson.nickName,
+              studentID:that.data.studentID,
+              headImage:resjson.avatarUrl,
+              isServer:that.data.isServer
+            })
+            wx.navigateBack({
+              complete: (res) => {},
+            })
+          },
+        })
+        
+      }
+    })
   },
   bindcheck: function(event){
     var that = this;

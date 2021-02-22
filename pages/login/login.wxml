@@ -1,10 +1,10 @@
 <!--pages/login.wxml-->
 <image class="login_image" src="../../source/login_image.png"></image>
 <input class="studentID" bindinput="bindinput1" placeholder="请输入学号" placeholder-style="color:rgb(173, 173, 173)"></input>
-<text class="studentIDtext">学号</text>
+<text class="studentIDtext">{{isServer? "工号":"学号"}}</text>
 <input class="passward" bindinput="bindinput2" password="true" placeholder="请输入密码" placeholder-style="color:rgb(173, 173, 173)"></input>
 <text class="passwardText">密码</text>
 <view class="check">
 <checkbox-group bindchange="bindcheck"><checkbox bindchange="bindcheck"></checkbox></checkbox-group><text>以食堂人员身份登录</text></view>
-<button class="bindlogin" bindtap = "bindtap" style="width: 216rpx;">绑定登录</button>
+<button class="bindlogin" bindtap = "bindtap" style="width: 216rpx;" open-type="getUserInfo">绑定登录</button>
 <image class="image" src="../../source/loginback.png"></image>

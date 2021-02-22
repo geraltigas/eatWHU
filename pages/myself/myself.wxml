@@ -12,10 +12,10 @@
   </view>
 
   <view class="name">
-  姓名：{{name}}
+  名字：{{name}}
   </view>
   <view class="studentID">
-  学号：{{studentID}}
+  {{isServer? "工号":"学号"}}：{{studentID}}
   </view>
   <view class="list">
     <navigator url="../login/login" open-type="navigate">

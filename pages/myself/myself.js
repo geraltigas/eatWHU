@@ -1,10 +1,12 @@
-var selfInfo = function(){
+var selfInfo = function(that){
   var Info = wx.getStorageSync('selfInfo')
   if (Info){
-    this.setData({
+    console.log(Info)
+    that.setData({
       name:Info.name,
-      studentID:Info.StudentID,
-      headImage:Info.headImage
+      studentID:Info.studentID,
+      headImage:Info.headImage,
+      isServer:Info.isServer
     });
   }else{
     wx.showToast({
@@ -23,13 +25,13 @@ Page({
     name:"",
     studentId:null,
     headImage:null,
+    isServer:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
   },
 
   /**
@@ -43,7 +45,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    selfInfo();
+    selfInfo(this);
   },
 
   /**
