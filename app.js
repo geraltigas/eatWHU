@@ -1,39 +1,23 @@
 // app.js
 // 检测缓存来确定是否登录以及登陆者的身份
-var loginDetect = function (){
-  if(wx.getStorageSync('isLogin')){
-    if(wx.getStorageSync('isStudent')){
-      wx.setTabBarItem({
-        index: 1,
-        text:"餐厅",
-        iconPath: "source/canteen_selected.png",
-        selectedIconPath:"source/canteen.png"
-      })
-    }else{
-      wx.setTabBarItem({
-        index: 1,
-        text:"消息",
-        iconPath: "source/message_after.png",
-        selectedIconPath:"source/message.png"
-      })
-    }
-  }else{
-    wx.showToast({
-      title: '未登录',
-      duration:1000,
-      icon:"none"
-    })
-  }
-}
 
 App({
   onLaunch() {
-    loginDetect();
-    console.log(wx.getStorageSync('isLogin'))
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', )
-
+    var isServer = wx.getStorageSync('selfInfo').isServer;
+    console.log(isServer)
+    if(isServer){
+      wx.setTabBarItem({
+        index: 1,
+        text: "消息",
+        iconPath:"source/message_after.png",
+        selectedIconPath:"source/message.png",
+        fail:function(){
+         console.log("fail")
+        }
+      })
+    }else{
+      console.log("fuck")
+    }
     // 登录
     wx.login({
       success: res => {
@@ -63,6 +47,7 @@ App({
   },
   onload:function(){
     
+
   },
   globalData: {
     userInfo: null,

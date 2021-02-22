@@ -32,6 +32,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  
   },
 
   /**
@@ -46,6 +47,21 @@ Page({
    */
   onShow: function () {
     selfInfo(this);
+    var isServer = wx.getStorageSync('selfInfo').isServer;
+    console.log(isServer)
+    if(isServer){
+      wx.setTabBarItem({
+        index: 1,
+        text: "消息",
+        iconPath:"source/message_after.png",
+        selectedIconPath:"source/message.png",
+        fail:function(){
+         console.log("fail")
+        }
+      })
+    }else{
+      console.log("fuck")
+    }
   },
 
   /**
