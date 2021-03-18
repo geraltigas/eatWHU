@@ -6,5 +6,6 @@
 <text class="passwardText">密码</text>
 <view class="check">
 <checkbox-group bindchange="bindcheck"><checkbox bindchange="bindcheck"></checkbox></checkbox-group><text>以食堂人员身份登录</text></view>
-<button class="bindlogin" bindtap = "bindtap" style="width: 216rpx;" open-type="getUserInfo">绑定登录</button>
+<button class="bindlogin" bindtap = "bindtap" style="width: 216rpx;" open-type="getUserInfo">解除绑定</button>
+<button class="bindlogin2" bindtap = "bindtap2" style="width: 216rpx;" open-type="getUserInfo">修改密码</button>
 <image class="image" src="../../source/loginback.png"></image>

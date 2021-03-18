@@ -1,0 +1,70 @@
+/* pages/myself/bind/bind.wxss */
+.container{
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 0rpx;
+    padding-top: 10rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.container view text{
+    position: relative;
+    top: 10rpx;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: Regular;
+}
+.container view input{
+    position: relative;
+    bottom: 30rpx;
+}
+.container view{
+    width: 100%;
+    height: 70rpx;
+}
+.xuehao{
+    border-top: 1px solid rgb(228, 228, 228);
+}
+.password{
+    border-top: 1px solid rgb(228, 228, 228);
+}
+.confirm{
+    border-top: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+input{
+    position: relative;
+    bottom: 800rpx;
+    padding-left: 120rpx;
+}
+.top-saying{
+    display: block;
+    margin: 30rpx;
+    margin-top: 10rpx;
+    font-family: PingFang SC;
+    font-weight: Regular;
+    color: rgb(182, 182, 182);
+    font-size: 25rpx;
+}
+.cross{
+    width: 27rpx;
+    height: 27rpx;
+    position: relative;
+    bottom: 72rpx;
+    left: 650rpx;
+    z-index: 100;
+}
+button{
+    width: 216rpx!important;
+    height: 60rpx;
+    margin-top: 40rpx;
+    padding: 0rpx!important;
+    padding-top: 8rpx!important;
+    background-color: rgba(249, 185, 112, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: Regular;
+    font-family: YouYuan;
+    font-size: 30rpx!important;
+    border-radius: 10rpx!important;
+}

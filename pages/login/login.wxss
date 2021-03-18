@@ -53,7 +53,22 @@ checkbox .wx-checkbox-input{
 }
 .bindlogin{
     position: relative;
-    top: 180rpx;
+    top: 130rpx;
+    right: 130rpx;
+    background-color: rgba(249, 185, 112, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: YouYuan;
+    font-size: 16px;
+    font-weight: normal;
+    height: 68rpx;
+    padding: 0rpx;
+    padding-top: 10rpx;
+    z-index: 1;
+}
+.bindlogin2{
+    position: relative;
+    top: 63rpx;
+    left: 150rpx;
     background-color: rgba(249, 185, 112, 1);
     color: rgba(255, 255, 255, 1);
     font-family: YouYuan;

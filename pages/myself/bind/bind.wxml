@@ -1,0 +1,28 @@
+<!--pages/myself/bind/bind.wxml-->
+<text class = "top-saying">设置自强密码后可通过学号和自强密码登录自强产品， 如食武、掌武、淘课啦等。</text>
+<view class = "container">
+    <view class = "xuehao">
+        <view wx:if="{{isBind}}">
+            <text class="xuehaoText">学号
+            </text>
+            <text class="isBindXuehao">{{xuehao}}</text>
+        </view>
+        <view wx:if="{{!isBind}}">
+            <text class="xuehaoText">学号
+            </text>
+            <input class="xuehaoInput">
+            </input>
+        </view>
+    </view>
+    <view class = "password">
+        <text class = "pwt">{{passwordText}}</text>
+        <input class="passwordInput" type="password" bindchange="password">{{password}}</input>
+    </view>
+    <view class = "confirm">
+        <text class="confirmText">确认密码</text>
+        <input class="confirmInput" type="password" bindchange="isSame" value="{{passwordConfirm}}"></input>
+        <image src="../../../source/cross.png" class="cross" bindtap="tapDelete"/>
+    </view>
+</view>
+<text class="isSame" wx:if="{{!isSame}}" style = "position:relative;font-size:20rpx;left: 50rpx;color:rgb(253, 94, 94)"> 前后密码不一致 </text>
+<button class="bindButton" bindtap="check">完成</button>

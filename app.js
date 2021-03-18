@@ -5,17 +5,17 @@ App({
   onLaunch() {
     var isServer = wx.getStorageSync('selfInfo').isServer;
     console.log(isServer)
-    if(isServer){
+    if (isServer) {
       wx.setTabBarItem({
         index: 1,
         text: "消息",
-        iconPath:"source/message_after.png",
-        selectedIconPath:"source/message.png",
-        fail:function(){
-         console.log("fail")
+        iconPath: "source/message_after.png",
+        selectedIconPath: "source/message.png",
+        fail: function () {
+          console.log("fail")
         }
       })
-    }else{
+    } else {
       console.log("fuck")
     }
     // 登录
@@ -45,8 +45,8 @@ App({
       }
     })
   },
-  onload:function(){
-    
+  onload: function () {
+
 
   },
   globalData: {

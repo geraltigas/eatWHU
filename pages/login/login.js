@@ -19,6 +19,9 @@ Page({
       studentID:event.detail.value
     });
   },
+  bindtap2: function(event){
+    navigator
+  },
   bindinput2: function(event){
     var that=this;
     that.setData({
